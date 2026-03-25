@@ -1,0 +1,5 @@
+com\svalero\tienda\util\DateUtils.class
+com\svalero\tienda\model\usuario.class
+com\svalero\tienda\model\videojuego.class
+com\svalero\tienda\model\categoria.class
+com\svalero\tienda\model\pedido.class
