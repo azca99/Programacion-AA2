@@ -7,9 +7,28 @@
     <list default="true" id="8cedd97e-a817-4d92-8ed6-325ab78ff59a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/model/categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/model/pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/model/usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/model/videojuego.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/util/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/util/DateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/categoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/pedido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/videojuego.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tienda.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/categoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/pedido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/videojuego.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tienda/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,30 +58,41 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.main.executor": "Run",
+    "Maven.Programacion-AA2 [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.Programacion-AA2 [org.apache.maven.plugins:maven-deploy-plugin:3.1.2:deploy].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/dao",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/grado superior programacion/programacion/webapp/Programacion-AA2",
+    "last_opened_file_path": "E:/grado superior programacion/programacion/webapp/Programacion-AA2/pom.xml",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "IntelliLang.Configuration",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
 }]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
+      <module name="pom.xml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="pom.xml" />
       <option name="filePath" />
       <method v="2" />
     </configuration>
@@ -85,7 +115,12 @@
       <workItem from="1774274828257" duration="718000" />
       <workItem from="1774360343375" duration="5204000" />
       <workItem from="1774443559301" duration="1123000" />
-      <workItem from="1774445799224" duration="314000" />
+      <workItem from="1774445799224" duration="5185000" />
+      <workItem from="1774540209624" duration="636000" />
+      <workItem from="1774615366372" duration="1325000" />
+      <workItem from="1774616738613" duration="1396000" />
+      <workItem from="1774619622909" duration="20000" />
+      <workItem from="1774619655543" duration="7097000" />
     </task>
     <servers />
   </component>
