@@ -7,16 +7,9 @@
     <list default="true" id="8cedd97e-a817-4d92-8ed6-325ab78ff59a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/categoria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/pedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/videojuego.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tienda.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/categoria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/pedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/videojuego.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tienda/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,34 +38,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Programacion-AA2 [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Programacion-AA2 [org.apache.maven.plugins:maven-deploy-plugin:3.1.2:deploy].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/maquetacion&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/grado superior programacion/programacion/webapp/Programacion-AA2/pom.xml&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;IntelliLang.Configuration&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.main.executor": "Run",
+    "Maven.Programacion-AA2 [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.Programacion-AA2 [org.apache.maven.plugins:maven-deploy-plugin:3.1.2:deploy].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature/videojuegos",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/grado superior programacion/programacion/webapp/Programacion-AA2/pom.xml",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "IntelliLang.Configuration",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="pom.xml" />
@@ -110,7 +103,7 @@
       <workItem from="1774616738613" duration="1396000" />
       <workItem from="1774619622909" duration="20000" />
       <workItem from="1774619655543" duration="7097000" />
-      <workItem from="1777301383909" duration="4580000" />
+      <workItem from="1777301383909" duration="7014000" />
     </task>
     <servers />
   </component>
