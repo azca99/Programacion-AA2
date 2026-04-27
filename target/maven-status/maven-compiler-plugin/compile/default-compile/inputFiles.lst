@@ -1,8 +1,11 @@
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\dao\CategoriaDAO.java
+E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\dao\CategoriaMapper.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\dao\PedidoDAO.java
+E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\dao\PedidoMapper.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\dao\UsuarioDAO.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\dao\UsuarioMapper.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\dao\VideojuegoDAO.java
+E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\dao\VideojuegoMapper.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\db\Database.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\model\Categoria.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\model\Pedido.java
