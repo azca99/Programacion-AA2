@@ -1,5 +1,6 @@
 com\svalero\tienda\dao\UsuarioDAO.class
 com\svalero\tienda\servlet\ListCategorias.class
+com\svalero\tienda\servlet\DeleteCategoria.class
 com\svalero\tienda\dao\CategoriaMapper.class
 com\svalero\tienda\model\Categoria.class
 com\svalero\tienda\dao\UsuarioMapper.class
