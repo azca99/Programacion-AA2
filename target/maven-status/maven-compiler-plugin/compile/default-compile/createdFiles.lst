@@ -20,6 +20,7 @@ com\svalero\tienda\model\Categoria.class
 com\svalero\tienda\db\Database.class
 com\svalero\tienda\dao\PedidoDAO.class
 com\svalero\tienda\dao\CategoriaDAO.class
+com\svalero\tienda\servlet\LogoutServlet.class
 com\svalero\tienda\servlet\ListUsuarios.class
 com\svalero\tienda\servlet\ListVideojuegos.class
 com\svalero\tienda\servlet\ViewVideojuego.class
