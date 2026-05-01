@@ -15,6 +15,12 @@
           event.preventDefault();
 
           const form = $("#new-form")[0];
+
+          if (!form.checkValidity()) {
+              form.reportValidity();
+              return;
+          }
+
           const data = new FormData(form);
 
           $("#new-button").prop("disabled", true);
