@@ -15,3 +15,4 @@ com\svalero\tienda\servlet\ViewVideojuego.class
 com\svalero\tienda\servlet\EditVideojuego.class
 com\svalero\tienda\model\Videojuego.class
 com\svalero\tienda\util\DateUtils.class
+com\svalero\tienda\servlet\DeleteVideojuego.class
