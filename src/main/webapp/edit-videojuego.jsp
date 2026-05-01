@@ -80,39 +80,48 @@
             <input type="text"
                    class="form-control"
                    name="titulo"
-                   value="<%= videojuego != null ? videojuego.getTitulo() : "" %>">
+                   value="<%= videojuego != null ? videojuego.getTitulo() : "" %>"
+                   required
+                   minlength="2"
+                   maxlength="120">
         </div>
         <div class="col-md-6">
             <label class="form-label">Precio</label>
             <input type="number"
-                   step="0.01"
+                   step="0.50"
+                   min="0.50"
                    class="form-control"
                    name="precio"
-                   value="<%= videojuego != null ? videojuego.getPrecio() : "" %>">
+                   value="<%= videojuego != null ? videojuego.getPrecio() : "" %>"
+                   required>
         </div>
         <div class="col-md-6">
             <label class="form-label">Descripción</label>
             <textarea class="form-control"
                       name="descripcion"
-                      rows="4"><%= videojuego != null ? videojuego.getDescripcion() : ""%></textarea>
+                      rows="4"
+                      maxlength="255"><%= videojuego != null ? videojuego.getDescripcion() : "" %></textarea>
         </div>
         <div class="col-md-6">
             <label class="form-label">Stock</label>
             <input type="number"
+                   min="0"
                    class="form-control"
                    name="stock"
-                   value="<%= videojuego != null ? videojuego.getStock() : "" %>">
+                   value="<%= videojuego != null ? videojuego.getStock() : "" %>"
+                   required>
         </div>
         <div class="col-md-4">
             <label class="form-label">Fecha de lanzamiento</label>
             <input type="date"
                    class="form-control"
                    name="fechaLanzamiento"
-                   value="<%= videojuego != null ? videojuego.getFechaLanzamiento() : "" %>">
+                   value="<%= videojuego != null ? videojuego.getFechaLanzamiento() : "" %>"
+                   required>
         </div>
         <div class="col-md-4">
             <label class="form-label">Categoría</label>
-            <select class="form-select" name="idCategoria">
+            <select class="form-select" name="idCategoria" required>
                 <option value="">Selecciona una categoría</option>
 
                 <%
