@@ -20,8 +20,13 @@ public class ViewVideojuego extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        // Id del videojuego TODO que no sea null
         String id = request.getParameter("id");
+
+        // Validación id
+        if (id == null || id.isEmpty()) {
+            response.sendError(400, "Falta el id del videojuego");
+            return;
+        }
 
         try {
             Database.connect();

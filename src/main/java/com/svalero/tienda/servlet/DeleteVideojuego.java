@@ -19,7 +19,14 @@ public class DeleteVideojuego extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        int id = Integer.parseInt(request.getParameter("id"));
+        String idParam = request.getParameter("id");
+
+        if (idParam == null || idParam.isEmpty()) {
+            response.sendError(400, "Falta el id del videojuego");
+            return;
+        }
+
+        int id = Integer.parseInt(idParam);
 
         try {
             Database.connect();
