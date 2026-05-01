@@ -81,6 +81,13 @@
     No se ha encontrado el usuario solicitado.
   </div>
 
+  <!-- Botones -->
+  <a href="remove-usuario?id=<%= usuario.getIdUsuario() %>"
+     class="btn btn-outline-danger"
+     onclick="return confirm('¿Seguro que quieres eliminar este usuario?')">
+    Eliminar
+  </a>
+
   <a href="usuarios" class="btn btn-secondary">
     Volver a usuarios
   </a>
