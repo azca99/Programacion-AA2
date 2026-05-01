@@ -33,7 +33,7 @@
               processData: false,
               contentType: false,
               cache: false,
-              timeout: 3000,
+              timeout: 60000,
               success: function (data) {
                   $("#result").html(data);
                   $("#new-button").prop("disabled", false);
