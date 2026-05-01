@@ -9,6 +9,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
+import com.svalero.tienda.model.Usuario;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,6 +28,12 @@ public class EditVideojuego extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        // Comprobación usuario
+        if (!isAdmin(request)) {
+            response.sendRedirect("index.jsp");
+            return;
+        }
 
         // Botones
         String action = request.getParameter("action");
@@ -186,5 +194,17 @@ public class EditVideojuego extends HttpServlet {
 
     private void sendMessage(HttpServletResponse response, String type, String message) throws IOException {
         response.getWriter().println("<div class=\"alert alert-" + type + "\" role=\"alert\">\n" + message + "</div>");
+    }
+
+    private boolean isAdmin(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+
+        if (session == null) {
+            return false;
+        }
+
+        Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
+
+        return usuarioSesion != null && "admin".equals(usuarioSesion.getRol());
     }
 }

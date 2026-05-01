@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -19,6 +20,12 @@ public class ViewUsuario extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        // Ver usuario
+        if (!isAdmin(request)) {
+            response.sendRedirect("index.jsp");
+            return;
+        }
 
         String id = request.getParameter("id");
 
@@ -40,5 +47,16 @@ public class ViewUsuario extends HttpServlet {
             e.printStackTrace();
             response.sendError(500, "Error al cargar el usuario");
         }
+    }
+    private boolean isAdmin(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+
+        if (session == null) {
+            return false;
+        }
+
+        Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
+
+        return usuarioSesion != null && "admin".equals(usuarioSesion.getRol());
     }
 }

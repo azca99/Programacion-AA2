@@ -5,6 +5,13 @@
 
 <%@ include file="includes/header.jsp" %>
 
+<%
+  if (usuarioSesion == null || !"admin".equals(usuarioSesion.getRol())) {
+    response.sendRedirect("index.jsp");
+    return;
+  }
+%>
+
 <!-- Formulario con AJAX sin recorgar página -->
 <script>
   $(document).ready(function () {

@@ -9,6 +9,13 @@
 
 <%@ include file="includes/header.jsp" %>
 
+<%
+    if (usuarioSesion == null || !"admin".equals(usuarioSesion.getRol())) {
+        response.sendRedirect("index.jsp");
+        return;
+    }
+%>
+
 <script>
     $(document).ready(function () {
       $("#new-button").click(function (event) {

@@ -2,11 +2,13 @@ package com.svalero.tienda.servlet;
 
 import com.svalero.tienda.dao.UsuarioDAO;
 import com.svalero.tienda.db.Database;
+import com.svalero.tienda.model.Usuario;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -18,6 +20,12 @@ public class DeleteUsuario extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        // Ver usuario
+        if (!isAdmin(request)) {
+            response.sendRedirect("index.jsp");
+            return;
+        }
 
         String idParam = request.getParameter("id");
 
@@ -46,5 +54,16 @@ public class DeleteUsuario extends HttpServlet {
                             "<a href='usuarios' class='btn btn-secondary'>Volver a usuarios</a>"
             );
         }
+    }
+    private boolean isAdmin(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+
+        if (session == null) {
+            return false;
+        }
+
+        Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
+
+        return usuarioSesion != null && "admin".equals(usuarioSesion.getRol());
     }
 }
