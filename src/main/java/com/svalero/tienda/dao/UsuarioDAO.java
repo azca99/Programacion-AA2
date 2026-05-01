@@ -26,4 +26,8 @@ public interface UsuarioDAO {
     @SqlQuery("SELECT * FROM usuario WHERE id_usuario = ?")
     @UseRowMapper(UsuarioMapper.class)
     Usuario getById(int idUsuario);
+
+    @SqlQuery("SELECT * FROM usuario WHERE email = ? AND password = ? AND activo = true")
+    @UseRowMapper(UsuarioMapper.class)
+    Usuario login(String email, String password);
 }
