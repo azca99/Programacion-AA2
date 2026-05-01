@@ -19,6 +19,10 @@ public interface VideojuegoDAO {
     @SqlUpdate("UPDATE videojuego SET titulo = ?, descripcion = ?, precio = ?, imagen = ?, destacado = ?, fecha_lanzamiento = ?, stock = ?, id_categoria = ? WHERE id_videojuego = ?")
     void modify(String titulo, String descripcion, double precio, String imagen, boolean destacado, LocalDate fechaLanzamiento, int stock, int idCategoria, int idVideojuego);
 
+    @SqlUpdate("UPDATE videojuego SET titulo = ?, descripcion = ?, precio = ?, destacado = ?, fecha_lanzamiento = ?, stock = ?, id_categoria = ? WHERE id_videojuego = ?")
+    void modifyWithoutImage(String titulo, String descripcion, double precio, boolean destacado,
+                            LocalDate fechaLanzamiento, int stock, int idCategoria, int idVideojuego);
+
     @SqlQuery("SELECT * FROM videojuego")
     @UseRowMapper(VideojuegoMapper.class)
     List<Videojuego> getAll();

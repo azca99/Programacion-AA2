@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="includes/header.jsp" %>
 
-<!-- HERO PRINCIPAL -->
+<!-- HERO  -->
 <section class="bg-dark text-white text-center py-5">
   <div class="container">
     <h1 class="display-3 fw-bold">God of Games</h1>
@@ -28,7 +28,7 @@
 
     <div class="row g-4">
 
-      <!-- CARD 1 -->
+      <!-- JUEGO1 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <img src="img/gow.jpg" class="card-img-top" alt="God of War">
@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <!-- CARD 2 -->
+      <!-- JUEGO 2 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <img src="img/fifa.jpg" class="card-img-top" alt="FIFA">
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <!-- CARD 3 -->
+      <!-- JUEGO 3 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <img src="img/zelda.jpg" class="card-img-top" alt="Zelda">
@@ -118,7 +118,7 @@
   </div>
 </section>
 
-<!-- OFERTA -->
+<!-- OFERTAS -->
 <section class="bg-primary text-white text-center py-5">
   <div class="container">
     <h2>Ofertas de la semana</h2>

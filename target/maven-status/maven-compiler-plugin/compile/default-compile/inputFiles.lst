@@ -11,4 +11,8 @@ E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\jav
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\model\Pedido.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\model\Usuario.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\model\Videojuego.java
+E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\servlet\DeleteVideojuego.java
+E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\servlet\EditVideojuego.java
+E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\servlet\ListVideojuegos.java
+E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\servlet\ViewVideojuego.java
 E:\grado superior programacion\programacion\webapp\Programacion-AA2\src\main\java\com\svalero\tienda\util\DateUtils.java

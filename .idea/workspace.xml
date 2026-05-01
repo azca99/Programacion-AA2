@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cedd97e-a817-4d92-8ed6-325ab78ff59a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/categoria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/pedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svalero/tienda/model/videojuego.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/dao/VideojuegoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/dao/VideojuegoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/servlet/EditVideojuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/servlet/EditVideojuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/videojuegos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/videojuegos.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tienda.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/categoria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/pedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/WEB-INF/classes/com/svalero/tienda/model/videojuego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tienda/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/maquetacion&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/videojuegos&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/grado superior programacion/programacion/webapp/Programacion-AA2/pom.xml&quot;,
@@ -110,7 +106,9 @@
       <workItem from="1774616738613" duration="1396000" />
       <workItem from="1774619622909" duration="20000" />
       <workItem from="1774619655543" duration="7097000" />
-      <workItem from="1777301383909" duration="4580000" />
+      <workItem from="1777301383909" duration="7124000" />
+      <workItem from="1777387549476" duration="1649000" />
+      <workItem from="1777398557685" duration="9731000" />
     </task>
     <servers />
   </component>
