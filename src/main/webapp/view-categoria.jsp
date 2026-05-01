@@ -75,6 +75,13 @@
         No se ha encontrado la categoría solicitada.
     </div>
 
+    <!-- Botones -->
+    <a href="remove-categoria?id=<%= categoria.getIdCategoria() %>"
+       class="btn btn-danger"
+       onclick="return confirm('¿Seguro que quieres eliminar esta categoría?')">
+        Eliminar
+    </a>
+
     <a href="categorias" class="btn btn-secondary">
         Volver a categorías
     </a>
