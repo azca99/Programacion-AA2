@@ -31,20 +31,44 @@ public class EditVideojuego extends HttpServlet {
         String action = request.getParameter("action");
         String id = request.getParameter("id");
 
-        // Validación básica
+        // Validaciones
         String titulo = request.getParameter("titulo");
-        if (titulo == null || titulo.isEmpty()) {
+        if (isEmpty(titulo)) {
             sendError(response, "El videojuego debe tener título");
             return;
         }
 
-        // Recoger campos
+        String precioParam = request.getParameter("precio");
+        if (!isPositiveDouble(precioParam)) {
+            sendError(response, "El precio debe ser un número mayor que 0");
+            return;
+        }
+
+        String stockParam = request.getParameter("stock");
+        if (!isPositiveInt(stockParam)) {
+            sendError(response, "El stock debe ser un número igual o mayor que 0");
+            return;
+        }
+
+        String fechaParam = request.getParameter("fechaLanzamiento");
+        if (isEmpty(fechaParam)) {
+            sendError(response, "La fecha de lanzamiento es obligatoria");
+            return;
+        }
+
+        String idCategoriaParam = request.getParameter("idCategoria");
+        if (isEmpty(idCategoriaParam)) {
+            sendError(response, "Debes seleccionar una categoría");
+            return;
+        }
+
+        // Recoger datos
         String descripcion = request.getParameter("descripcion");
-        double precio = Double.parseDouble(request.getParameter("precio"));
-        int stock = Integer.parseInt(request.getParameter("stock"));
-        LocalDate fechaLanzamiento = LocalDate.parse(request.getParameter("fechaLanzamiento"));
+        double precio = Double.parseDouble(precioParam);
+        int stock = Integer.parseInt(stockParam);
+        LocalDate fechaLanzamiento = LocalDate.parse(fechaParam);
         boolean destacado = request.getParameter("destacado") != null;
-        int idCategoria = Integer.parseInt(request.getParameter("idCategoria"));
+        int idCategoria = Integer.parseInt(idCategoriaParam);
 
         // Recoger imagen (archivo)
         Part imagen = request.getPart("imagen");
@@ -117,6 +141,26 @@ public class EditVideojuego extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
             sendError(response, "Error al guardar el videojuego");
+        }
+    }
+
+    private boolean isEmpty(String value) {
+        return value == null || value.trim().isEmpty();
+    }
+
+    private boolean isPositiveDouble(String value) {
+        try {
+            return Double.parseDouble(value) > 0;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean isPositiveInt(String value) {
+        try {
+            return Integer.parseInt(value) >= 0;
+        } catch (Exception e) {
+            return false;
         }
     }
 
