@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cedd97e-a817-4d92-8ed6-325ab78ff59a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/dao/VideojuegoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/dao/VideojuegoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/servlet/EditVideojuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/servlet/EditVideojuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/includes/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/videojuegos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/videojuegos.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tienda.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/tienda.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/servlet/DeleteVideojuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/svalero/tienda/servlet/DeleteVideojuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-videojuego.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-videojuego.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +102,7 @@
       <workItem from="1774619655543" duration="7097000" />
       <workItem from="1777301383909" duration="7124000" />
       <workItem from="1777387549476" duration="1649000" />
-      <workItem from="1777398557685" duration="9731000" />
+      <workItem from="1777398557685" duration="10511000" />
     </task>
     <servers />
   </component>
