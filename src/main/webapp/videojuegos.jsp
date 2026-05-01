@@ -14,9 +14,11 @@
         <h1 class="fw-bold">Catálogo de videojuegos</h1>
         <p class="text-muted mb-0">Estos son los videojuegos disponibles en God of Games.</p>
 
-        <a href="edit-videojuego.jsp" class="btn btn-primary">
-            Añadir videojuego
-        </a>
+        <% if (esAdmin) { %>
+            <a href="edit-videojuego.jsp" class="btn btn-primary">
+                Añadir videojuego
+            </a>
+        <% } %>
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -65,12 +67,19 @@
                         Ver detalle
                     </a>
 
+                    <% if (esAdmin) { %>
                     <a href="edit-videojuego.jsp?id=<%= videojuego.getIdVideojuego() %>"
                        class="btn btn-outline-secondary">
                         Editar
                     </a>
-                </div>
 
+                    <a href="remove-videojuego?id=<%= videojuego.getIdVideojuego() %>"
+                       class="btn btn-outline-danger"
+                       onclick="return confirm('¿Seguro que quieres eliminar este videojuego?')">
+                        Eliminar
+                    </a>
+                    <% } %>
+                </div>
             </div>
         </div>
 

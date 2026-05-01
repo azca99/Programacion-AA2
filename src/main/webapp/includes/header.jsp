@@ -3,6 +3,7 @@
 
 <%
     Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
+    boolean esAdmin = usuarioSesion != null && "admin".equals(usuarioSesion.getRol());
 %>
 
 <!DOCTYPE html>
@@ -33,9 +34,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="videojuegos">Catálogo</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="categorias">Categorías</a>
-                </li>
+                <!-- pestañas solo para admins -->
+                <% if (esAdmin) { %>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="categorias">Categorías</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="usuarios">Usuarios</a>
+                    </li>
+
+                <% } %>
                 <!-- Usuario login -->
                 <% if (usuarioSesion == null) { %>
 
