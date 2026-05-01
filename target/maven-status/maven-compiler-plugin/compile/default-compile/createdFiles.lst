@@ -3,6 +3,7 @@ com\svalero\tienda\servlet\DeleteCategoria.class
 com\svalero\tienda\dao\CategoriaMapper.class
 com\svalero\tienda\dao\UsuarioMapper.class
 com\svalero\tienda\dao\VideojuegoMapper.class
+com\svalero\tienda\servlet\LoginServlet.class
 com\svalero\tienda\dao\VideojuegoDAO.class
 com\svalero\tienda\dao\PedidoMapper.class
 com\svalero\tienda\model\Pedido.class
