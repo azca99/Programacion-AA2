@@ -6,6 +6,12 @@
 
 <%
   Usuario usuario = (Usuario) request.getAttribute("usuario");
+
+  // Cliente no puede acceder a lista de usuarios
+  if (usuarioSesion == null || !"admin".equals(usuarioSesion.getRol())) {
+    response.sendRedirect("index.jsp");
+    return;
+  }
 %>
 
 <main class="container py-5">
@@ -82,11 +88,6 @@
   </div>
 
   <!-- Botones -->
-  <a href="remove-usuario?id=<%= usuario.getIdUsuario() %>"
-     class="btn btn-outline-danger"
-     onclick="return confirm('¿Seguro que quieres eliminar este usuario?')">
-    Eliminar
-  </a>
 
   <a href="usuarios" class="btn btn-secondary">
     Volver a usuarios

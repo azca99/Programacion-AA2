@@ -6,6 +6,12 @@
 
 <%
     List<Usuario> usuarios = (List<Usuario>) request.getAttribute("usuarios");
+
+    // Cliente no puede acceder a lista de usuarios
+    if (usuarioSesion == null || !"admin".equals(usuarioSesion.getRol())) {
+        response.sendRedirect("index.jsp");
+        return;
+    }
 %>
 
 <main class="container py-5">

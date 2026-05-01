@@ -1,4 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.svalero.tienda.model.Usuario" %>
+
+<%
+    Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
+    boolean esAdmin = usuarioSesion != null && "admin".equals(usuarioSesion.getRol());
+%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -28,12 +34,38 @@
                 <li class="nav-item">
                     <a class="nav-link" href="videojuegos">Catálogo</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="categorias">Categorías</a>
-                </li>
+                <!-- pestañas solo para admins -->
+                <% if (esAdmin) { %>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="categorias">Categorías</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="usuarios">Usuarios</a>
+                    </li>
+
+                <% } %>
+                <!-- Usuario login -->
+                <% if (usuarioSesion == null) { %>
+
                 <li class="nav-item">
                     <a class="nav-link" href="login.jsp">Login</a>
                 </li>
+
+                <% } else { %>
+
+                <li class="nav-item">
+                    <span class="nav-link">
+                        Hola, <%= usuarioSesion.getNombre() %> (<%= usuarioSesion.getRol() %>)
+                    </span>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="logout">Cerrar sesión</a>
+                </li>
+
+                <% } %>
             </ul>
         </div>
     </div>

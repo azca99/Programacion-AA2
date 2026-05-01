@@ -47,22 +47,24 @@
                 <%= videojuego.isDestacado() ? "Sí" : "No" %>
             </p>
 
-            // Botones
+            <!-- Botones -->
             <div class="mt-4 d-flex gap-2">
                 <a href="videojuegos" class="btn btn-secondary">
                     Volver al catálogo
                 </a>
 
-                <a href="edit-videojuego.jsp?id=<%= videojuego.getIdVideojuego() %>"
-                   class="btn btn-outline-primary">
-                    Editar
-                </a>
+                <% if (esAdmin) { %>
+                    <a href="edit-videojuego.jsp?id=<%= videojuego.getIdVideojuego() %>"
+                       class="btn btn-outline-secondary">
+                        Editar
+                    </a>
 
-                <a href="remove-videojuego?id=<%= videojuego.getIdVideojuego() %>"
-                   class="btn btn-danger"
-                   onclick="return confirm('¿Seguro que quieres eliminar este videojuego?')">
-                    Eliminar
-                </a>
+                    <a href="remove-videojuego?id=<%= videojuego.getIdVideojuego() %>"
+                       class="btn btn-outline-danger"
+                       onclick="return confirm('¿Seguro que quieres eliminar este videojuego?')">
+                        Eliminar
+                    </a>
+                <% } %>
 
                 <a href="#"
                    class="btn btn-success">

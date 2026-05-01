@@ -18,9 +18,11 @@
             </p>
         </div>
 
-        <a href="edit-categoria.jsp" class="btn btn-primary">
-            Añadir categoría
-        </a>
+        <% if (esAdmin) { %>
+            <a href="edit-categoria.jsp" class="btn btn-primary">
+                Añadir categoría
+            </a>
+        <% if (esAdmin) { %>
     </div>
 
     <div class="row g-4">
@@ -64,12 +66,19 @@
                         Ver detalle
                     </a>
 
+                    <% if (esAdmin) { %>
                     <a href="edit-categoria.jsp?id=<%= categoria.getIdCategoria() %>"
                        class="btn btn-outline-secondary">
                         Editar
                     </a>
-                </div>
 
+                    <a href="remove-categoria?id=<%= categoria.getIdCategoria() %>"
+                       class="btn btn-outline-danger"
+                       onclick="return confirm('¿Seguro que quieres eliminar esta categoría?')">
+                        Eliminar
+                    </a>
+                    <% } %>
+                </div>
             </div>
         </div>
 

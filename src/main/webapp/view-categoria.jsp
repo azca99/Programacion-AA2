@@ -54,16 +54,18 @@
                 Volver
             </a>
 
-            <a href="edit-categoria.jsp?id=<%= categoria.getIdCategoria() %>"
-               class="btn btn-outline-primary">
-                Editar
-            </a>
+            <% if (esAdmin) { %>
+                <a href="edit-categoria.jsp?id=<%= categoria.getIdCategoria() %>"
+                   class="btn btn-outline-primary">
+                    Editar
+                </a>
 
-            <a href="remove-categoria?id=<%= categoria.getIdCategoria() %>"
-               class="btn btn-danger"
-               onclick="return confirm('¿Seguro que quieres eliminar esta categoría?')">
-                Eliminar
-            </a>
+                <a href="remove-categoria?id=<%= categoria.getIdCategoria() %>"
+                   class="btn btn-danger"
+                   onclick="return confirm('¿Seguro que quieres eliminar esta categoría?')">
+                    Eliminar
+                </a>
+            <% } %>
 
         </div>
 
@@ -74,13 +76,6 @@
     <div class="alert alert-warning">
         No se ha encontrado la categoría solicitada.
     </div>
-
-    <!-- Botones -->
-    <a href="remove-categoria?id=<%= categoria.getIdCategoria() %>"
-       class="btn btn-danger"
-       onclick="return confirm('¿Seguro que quieres eliminar esta categoría?')">
-        Eliminar
-    </a>
 
     <a href="categorias" class="btn btn-secondary">
         Volver a categorías
