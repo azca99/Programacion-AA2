@@ -5,6 +5,13 @@
 <%@ include file="includes/header.jsp" %>
 
 <%
+  if (usuarioSesion == null || !"admin".equals(usuarioSesion.getRol())) {
+    response.sendRedirect("index.jsp");
+    return;
+  }
+%>
+
+<%
   Usuario usuario = (Usuario) request.getAttribute("usuario");
 
   // Cliente no puede acceder a lista de usuarios

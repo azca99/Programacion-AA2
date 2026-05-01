@@ -2,12 +2,14 @@ package com.svalero.tienda.servlet;
 
 import com.svalero.tienda.dao.CategoriaDAO;
 import com.svalero.tienda.db.Database;
+import com.svalero.tienda.model.Usuario;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -21,6 +23,12 @@ public class EditCategoria extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        // Ver usuario
+        if (!isAdmin(request)) {
+            response.sendRedirect("index.jsp");
+            return;
+        }
 
         String action = request.getParameter("action");
         String id = request.getParameter("id");
@@ -143,5 +151,17 @@ public class EditCategoria extends HttpServlet {
 
     private void sendMessage(HttpServletResponse response, String type, String message) throws IOException {
         response.getWriter().println("<div class=\"alert alert-" + type + "\" role=\"alert\">\n" + message + "</div>");
+    }
+
+    private boolean isAdmin(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+
+        if (session == null) {
+            return false;
+        }
+
+        Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
+
+        return usuarioSesion != null && "admin".equals(usuarioSesion.getRol());
     }
 }

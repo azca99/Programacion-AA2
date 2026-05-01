@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,6 +21,12 @@ public class ListUsuarios extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        // Ver usuario
+        if (!isAdmin(request)) {
+            response.sendRedirect("index.jsp");
+            return;
+        }
 
         try {
             Database.connect();
@@ -34,5 +41,16 @@ public class ListUsuarios extends HttpServlet {
             e.printStackTrace();
             response.sendError(500, "Error conectando con la base de datos");
         }
+    }
+    private boolean isAdmin(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+
+        if (session == null) {
+            return false;
+        }
+
+        Usuario usuarioSesion = (Usuario) session.getAttribute("usuario");
+
+        return usuarioSesion != null && "admin".equals(usuarioSesion.getRol());
     }
 }
