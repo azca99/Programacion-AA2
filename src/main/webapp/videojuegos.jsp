@@ -10,9 +10,9 @@
 
 <main class="container py-5">
 
-    <div class="mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="fw-bold">Catálogo de videojuegos</h1>
-        <p class="text-muted">Estos son los videojuegos disponibles en God of Games.</p>
+        <p class="text-muted mb-0">Estos son los videojuegos disponibles en God of Games.</p>
 
         <a href="edit-videojuego.jsp" class="btn btn-primary">
             Añadir videojuego
