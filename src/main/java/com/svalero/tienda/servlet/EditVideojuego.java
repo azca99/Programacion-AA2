@@ -64,11 +64,23 @@ public class EditVideojuego extends HttpServlet {
 
         // Recoger datos
         String descripcion = request.getParameter("descripcion");
-        double precio = Double.parseDouble(precioParam);
-        int stock = Integer.parseInt(stockParam);
-        LocalDate fechaLanzamiento = LocalDate.parse(fechaParam);
+
+        double precio;
+        int stock;
+        LocalDate fechaLanzamiento;
+        int idCategoria;
+
+        try {
+            precio = Double.parseDouble(precioParam);
+            stock = Integer.parseInt(stockParam);
+            fechaLanzamiento = LocalDate.parse(fechaParam);
+            idCategoria = Integer.parseInt(idCategoriaParam);
+        } catch (Exception e) {
+            sendError(response, "Hay campos con un formato incorrecto");
+            return;
+        }
+
         boolean destacado = request.getParameter("destacado") != null;
-        int idCategoria = Integer.parseInt(idCategoriaParam);
 
         // Recoger imagen (archivo)
         Part imagen = request.getPart("imagen");
