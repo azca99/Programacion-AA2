@@ -40,7 +40,7 @@
         <div class="col">
             <div class="card h-100 shadow-sm">
 
-                <a href="view-videojuego.jsp?id=<%= videojuego.getIdVideojuego() %>">
+                <a href="view-videojuego?id=<%= videojuego.getIdVideojuego() %>">
                     <img src="img/<%= videojuego.getImagen() %>"
                          class="card-img-top"
                          alt="<%= videojuego.getTitulo() %>"
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="card-footer bg-white border-0 d-flex gap-2">
-                    <a href="view-videojuego.jsp?id=<%= videojuego.getIdVideojuego() %>"
+                    <a href="view-videojuego?id=<%= videojuego.getIdVideojuego() %>"
                        class="btn btn-dark w-100">
                         Ver detalle
                     </a>
