@@ -9,6 +9,7 @@ com\svalero\tienda\db\Database.class
 com\svalero\tienda\dao\PedidoDAO.class
 com\svalero\tienda\dao\VideojuegoDAO.class
 com\svalero\tienda\dao\CategoriaDAO.class
+com\svalero\tienda\servlet\ListUsuarios.class
 com\svalero\tienda\dao\PedidoMapper.class
 com\svalero\tienda\model\Pedido.class
 com\svalero\tienda\model\Usuario.class
