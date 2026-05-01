@@ -12,6 +12,7 @@ com\svalero\tienda\dao\CategoriaDAO.class
 com\svalero\tienda\servlet\ListUsuarios.class
 com\svalero\tienda\dao\PedidoMapper.class
 com\svalero\tienda\model\Pedido.class
+com\svalero\tienda\servlet\ViewUsuario.class
 com\svalero\tienda\model\Usuario.class
 com\svalero\tienda\servlet\ListVideojuegos.class
 com\svalero\tienda\servlet\EditCategoria.class
