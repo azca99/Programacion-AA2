@@ -19,6 +19,18 @@
         response.sendRedirect("index.jsp");
         return;
     }
+
+    // Búsqueda
+    String textoBuscado = (String) request.getAttribute("textoBuscado");
+    String rolBuscado = (String) request.getAttribute("rolBuscado");
+
+    if (textoBuscado == null) {
+        textoBuscado = "";
+    }
+
+    if (rolBuscado == null) {
+        rolBuscado = "";
+    }
 %>
 
 <main class="container py-5">
@@ -35,6 +47,43 @@
             Añadir usuario
         </a>
     </div>
+
+    <!-- Formulario de búsqueda -->
+    <form action="usuarios" method="get" class="row g-3 mb-4">
+
+        <div class="col-md-5">
+            <label class="form-label">Nombre o email</label>
+            <input type="text"
+                   name="texto"
+                   class="form-control"
+                   placeholder="Buscar por nombre o email"
+                   value="<%= textoBuscado %>">
+        </div>
+
+        <div class="col-md-5">
+            <label class="form-label">Rol</label>
+            <select name="rol" class="form-select">
+                <option value="" <%= "".equals(rolBuscado) ? "selected" : "" %>>
+                    Todos los roles
+                </option>
+
+                <option value="admin" <%= "admin".equals(rolBuscado) ? "selected" : "" %>>
+                    Admin
+                </option>
+
+                <option value="cliente" <%= "cliente".equals(rolBuscado) ? "selected" : "" %>>
+                    Cliente
+                </option>
+            </select>
+        </div>
+
+        <div class="col-md-2 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">
+                Buscar
+            </button>
+        </div>
+
+    </form>
 
     <div class="row g-4">
 
