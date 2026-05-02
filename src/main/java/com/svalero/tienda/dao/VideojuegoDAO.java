@@ -30,4 +30,8 @@ public interface VideojuegoDAO {
     @SqlQuery("SELECT * FROM videojuego WHERE id_videojuego = ?")
     @UseRowMapper(VideojuegoMapper.class)
     Videojuego getById(int idVideojuego);
+
+    @SqlQuery("SELECT * FROM videojuego WHERE titulo LIKE CONCAT('%', ?, '%') AND (? = 0 OR id_categoria = ?)")
+    @UseRowMapper(VideojuegoMapper.class)
+    List<Videojuego> search(String titulo, int idCategoriaFiltro, int idCategoria);
 }

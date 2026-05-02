@@ -1,7 +1,9 @@
 package com.svalero.tienda.servlet;
 
+import com.svalero.tienda.dao.CategoriaDAO;
 import com.svalero.tienda.db.Database;
 import com.svalero.tienda.dao.VideojuegoDAO;
+import com.svalero.tienda.model.Categoria;
 import com.svalero.tienda.model.Videojuego;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -24,12 +26,36 @@ public class ListVideojuegos extends HttpServlet {
         try {
             Database.connect();
 
-            // DAO
+            // DAO, conecta con la BD
             VideojuegoDAO videojuegoDAO = jdbi.onDemand(VideojuegoDAO.class);
-            List<Videojuego> videojuegos = videojuegoDAO.getAll();
+            CategoriaDAO categoriasDAO = jdbi.onDemand(CategoriaDAO.class);
+
+            // Recoger y dar formato a inputs
+            String titulo = request.getParameter("titulo");
+            String idCategoriaParam = request.getParameter("idCategoria");
+
+            if (titulo == null) {
+                titulo = "";
+            }
+
+            int idCategoria = 0;
+
+            if (idCategoriaParam != null && !idCategoriaParam.isEmpty()) {
+                idCategoria = Integer.parseInt(idCategoriaParam);
+            }
+
+            // Buscar videojuegos
+            List<Videojuego> videojuegos = videojuegoDAO.search(titulo, idCategoria, idCategoria);
+            // Cargar categorias
+            List<Categoria> categorias = categoriasDAO.getAll();
 
             // MAndar datos al JSP
             request.setAttribute("videojuegos", videojuegos);
+            request.setAttribute("categorias", categorias);
+            request.setAttribute("tituloBuscado", titulo);
+            request.setAttribute("idCategoriaBuscada", idCategoria);
+
+            // Enviar al JSP
             request.getRequestDispatcher("videojuegos.jsp").forward(request, response);
 
         } catch (ClassNotFoundException e) {
