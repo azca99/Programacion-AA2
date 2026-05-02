@@ -27,6 +27,11 @@
         return;
       }
 
+      // Pedir confirmación
+      if (!confirm("¿Seguro que quieres guardar este usuario?")) {
+        return;
+      }
+
       // Crear formulario
       const data = new FormData(form);
 

@@ -28,6 +28,11 @@
               return;
           }
 
+          // Pedir confirmación
+          if (!confirm("¿Seguro que quieres guardar este videojuego?")) {
+              return;
+          }
+
           const data = new FormData(form);
 
           $("#new-button").prop("disabled", true);
@@ -101,8 +106,8 @@
         <div class="col-md-6">
             <label class="form-label">Precio</label>
             <input type="number"
-                   step="0.50"
-                   min="0.50"
+                   step="0.01"
+                   min="0.01"
                    class="form-control"
                    name="precio"
                    value="<%= videojuego != null ? videojuego.getPrecio() : "" %>"
