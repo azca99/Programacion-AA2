@@ -5,8 +5,25 @@
 <%@ page import="com.svalero.tienda.model.Videojuego" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="com.svalero.tienda.model.Categoria" %>
 
 <%@ include file="includes/header.jsp" %>
+
+<%
+    List<Videojuego> videojuegos = (List<Videojuego>) request.getAttribute("videojuegos");
+    List<Categoria> categorias = (List<Categoria>) request.getAttribute("categorias");
+
+    String tituloBuscado = (String) request.getAttribute("tituloBuscado");
+    Integer idCategoriaBuscada = (Integer) request.getAttribute("idCategoriaBuscada");
+
+    if (tituloBuscado == null) {
+        tituloBuscado = "";
+    }
+
+    if (idCategoriaBuscada == null) {
+        idCategoriaBuscada = 0;
+    }
+%>
 
 <main class="container py-5">
 
@@ -21,25 +38,55 @@
         <% } %>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <form action="videojuegos" method="get" class="row g-3 mb-4">
+
+        <div class="col-md-5">
+            <label class="form-label">Título</label>
+            <input type="text"
+                   name="titulo"
+                   class="form-control"
+                   placeholder="Buscar por título"
+                   value="<%= tituloBuscado %>">
+        </div>
+
+        <div class="col-md-5">
+            <label class="form-label">Categoría</label>
+            <select name="idCategoria" class="form-select">
+                <option value="0">Todas las categorías</option>
+
+                <%
+                    if (categorias != null) {
+                        for (Categoria categoria : categorias) {
+                            boolean selected = idCategoriaBuscada == categoria.getIdCategoria();
+                %>
+
+                <option value="<%= categoria.getIdCategoria() %>" <%= selected ? "selected" : "" %>>
+                    <%= categoria.getNombre() %>
+                </option>
+
+                <%
+                        }
+                    }
+                %>
+            </select>
+        </div>
+
+        <div class="col-md-2 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">
+                Buscar
+            </button>
+        </div>
+
+    </form>
+
+    <div class="row g-4">
 
         <%
-            List<Videojuego> videojuegos = new ArrayList<>();
-
-            try {
-                Database.connect();
-
-                VideojuegoDAO videojuegoDAO = Database.jdbi.onDemand(VideojuegoDAO.class);
-                videojuegos.addAll(videojuegoDAO.getAll());
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            for (Videojuego videojuego : videojuegos) {
+            if (videojuegos != null && !videojuegos.isEmpty()) {
+                for (Videojuego videojuego : videojuegos) {
         %>
 
-        <div class="col">
+        <div class="col-md-4">
             <div class="card h-100 shadow-sm">
 
                 <a href="view-videojuego?id=<%= videojuego.getIdVideojuego() %>">
@@ -80,6 +127,17 @@
                     </a>
                     <% } %>
                 </div>
+            </div>
+        </div>
+
+        <%
+            }
+        } else {
+        %>
+
+        <div class="col-12">
+            <div class="alert alert-warning">
+                No se han encontrado videojuegos con esos criterios.
             </div>
         </div>
 
