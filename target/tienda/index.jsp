@@ -14,9 +14,6 @@
         Ver catálogo
       </a>
 
-      <a href="#" class="btn btn-outline-light btn-lg">
-        Ofertas
-      </a>
     </div>
   </div>
 </section>
@@ -31,14 +28,19 @@
       <!-- JUEGO1 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="img/gow.jpg" class="card-img-top" alt="God of War">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="img/witcher3.jpg"
+                 class="card-img-top"
+                 alt="The Witcher 3"
+                 style="object-fit: cover">
+          </div>
 
           <div class="card-body">
-            <h5 class="card-title">God of War</h5>
-            <p class="card-text">Acción mitológica y aventura épica.</p>
-            <p class="fw-bold text-primary">59,99 €</p>
+            <h5 class="card-title">The Witcher 3</h5>
+            <p class="card-text">RPG de fantasía.</p>
+            <p class="fw-bold text-primary">39,99 €</p>
 
-            <a href="#" class="btn btn-dark w-100">
+            <a href="view-videojuego?id=3" class="btn btn-dark w-100">
               Ver detalle
             </a>
           </div>
@@ -48,14 +50,19 @@
       <!-- JUEGO 2 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="img/fifa.jpg" class="card-img-top" alt="FIFA">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="img/ea-sports-fc-26.jpg"
+                 class="card-img-top"
+                 alt="FIFA"
+                 style="object-fit: cover">
+          </div>
 
           <div class="card-body">
-            <h5 class="card-title">FIFA 24</h5>
+            <h5 class="card-title">EA Sports FC 26</h5>
             <p class="card-text">El simulador de fútbol más popular.</p>
-            <p class="fw-bold text-primary">49,99 €</p>
+            <p class="fw-bold text-primary">69,99 €</p>
 
-            <a href="#" class="btn btn-dark w-100">
+            <a href="view-videojuego?id=6" class="btn btn-dark w-100">
               Ver detalle
             </a>
           </div>
@@ -65,14 +72,19 @@
       <!-- JUEGO 3 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="img/zelda.jpg" class="card-img-top" alt="Zelda">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="img/zelda-botw.jpg"
+                 class="card-img-top"
+                 alt="Zelda"
+                 style="object-fit: cover">
+          </div>
 
           <div class="card-body">
             <h5 class="card-title">Zelda</h5>
             <p class="card-text">Exploración, puzles y fantasía.</p>
-            <p class="fw-bold text-primary">54,99 €</p>
+            <p class="fw-bold text-primary">49,99 €</p>
 
-            <a href="#" class="btn btn-dark w-100">
+            <a href="view-videojuego?id=5" class="btn btn-dark w-100">
               Ver detalle
             </a>
           </div>
@@ -90,42 +102,50 @@
 
     <div class="row text-center g-4">
 
-      <div class="col-md-3">
-        <div class="p-4 bg-white rounded shadow-sm">
-          <h5>Acción</h5>
-        </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <a href="videojuegos?idCategoria=1" class="text-decoration-none text-dark">
+          <div class="card shadow-sm h-100 text-center p-4 hover-card">
+            <h5 class="mb-0 fw-semibold">Acción</h5>
+          </div>
+        </a>
       </div>
 
-      <div class="col-md-3">
-        <div class="p-4 bg-white rounded shadow-sm">
-          <h5>RPG</h5>
-        </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <a href="videojuegos?idCategoria=3" class="text-decoration-none text-dark">
+          <div class="card shadow-sm h-100 text-center p-4 hover-card">
+            <h5 class="mb-0 fw-semibold">RPG</h5>
+          </div>
+        </a>
       </div>
 
-      <div class="col-md-3">
-        <div class="p-4 bg-white rounded shadow-sm">
-          <h5>Deportes</h5>
-        </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <a href="videojuegos?idCategoria=2" class="text-decoration-none text-dark">
+          <div class="card shadow-sm h-100 text-center p-4 hover-card">
+            <h5 class="mb-0 fw-semibold">Deportes</h5>
+          </div>
+        </a>
       </div>
 
-      <div class="col-md-3">
-        <div class="p-4 bg-white rounded shadow-sm">
-          <h5>Retro</h5>
-        </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <a href="videojuegos?idCategoria=5" class="text-decoration-none text-dark">
+          <div class="card shadow-sm h-100 text-center p-4 hover-card">
+            <h5 class="mb-0 fw-semibold">Aventura</h5>
+          </div>
+        </a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- OFERTAS -->
+<!-- CATÁLOGO -->
 <section class="bg-primary text-white text-center py-5">
   <div class="container">
-    <h2>Ofertas de la semana</h2>
-    <p class="lead">Hasta un 30% de descuento en juegos seleccionados</p>
+    <h2>Explora nuestro catálogo</h2>
+    <p class="lead">Encuentra videojuegos clásicos, actuales y destacados</p>
 
-    <a href="#" class="btn btn-light btn-lg">
-      Ver promociones
+    <a href="videojuegos" class="btn btn-light btn-lg">
+      Ver catálogo
     </a>
   </div>
 </section>
