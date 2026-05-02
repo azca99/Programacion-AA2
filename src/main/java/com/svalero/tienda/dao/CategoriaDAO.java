@@ -26,4 +26,9 @@ public interface CategoriaDAO {
     @SqlQuery("SELECT * FROM categoria WHERE id_categoria = ?")
     @UseRowMapper(CategoriaMapper.class)
     Categoria getById(int idCategoria);
+
+    @SqlQuery("SELECT * FROM categoria WHERE nombre LIKE CONCAT('%', ?, '%') AND (? = -1 OR activa = ?)")
+    @UseRowMapper(CategoriaMapper.class)
+    List<Categoria> search(String nombre, int activaFiltro, int activa);
+
 }
