@@ -32,9 +32,27 @@ public class ListUsuarios extends HttpServlet {
             Database.connect();
 
             UsuarioDAO usuarioDAO = jdbi.onDemand(UsuarioDAO.class);
-            List<Usuario> usuarios = usuarioDAO.getAll();
 
+            // Recoger, validar y dar formato a inputs
+            String texto = request.getParameter("texto");
+            String rol = request.getParameter("rol");
+
+            if (texto == null) {
+                texto = "";
+            }
+
+            if  (rol == null) {
+                rol = "";
+            }
+
+            List<Usuario> usuarios = usuarioDAO.search(texto, texto, rol, rol);
+
+            // Mandar datos al  JSP
             request.setAttribute("usuarios", usuarios);
+            request.setAttribute("textoBuscado", texto);
+            request.setAttribute("rolBuscado", rol);
+
+            // Enviar datos al JSP
             request.getRequestDispatcher("usuarios.jsp").forward(request, response);
 
         } catch (ClassNotFoundException e) {

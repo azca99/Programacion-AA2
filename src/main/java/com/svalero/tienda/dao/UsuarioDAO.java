@@ -30,4 +30,8 @@ public interface UsuarioDAO {
     @SqlQuery("SELECT * FROM usuario WHERE email = ? AND password = ? AND activo = true")
     @UseRowMapper(UsuarioMapper.class)
     Usuario login(String email, String password);
+
+    @SqlQuery("SELECT * FROM usuario WHERE (nombre LIKE CONCAT('%', ?, '%') OR email LIKE CONCAT('%', ?, '%')) AND (? = '' OR rol = ?)")
+    @UseRowMapper(UsuarioMapper.class)
+    List<Usuario> search(String textoNombre, String textoEmail, String rolFiltro, String rol);
 }
