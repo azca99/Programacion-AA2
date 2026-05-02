@@ -15,7 +15,7 @@
     <div class="row g-5 align-items-start">
 
         <div class="col-md-6">
-            <img src="img/<%= videojuego.getImagen() %>"
+            <img src="/tienda_images/<%= videojuego.getImagen() %>"
                  class="img-fluid rounded shadow"
                  alt="<%= videojuego.getTitulo() %>">
         </div>

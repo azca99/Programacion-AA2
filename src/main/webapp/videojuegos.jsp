@@ -91,7 +91,7 @@
             <div class="card h-100 shadow-sm">
 
                 <a href="view-videojuego?id=<%= videojuego.getIdVideojuego() %>">
-                    <img src="img/<%= videojuego.getImagen() %>"
+                    <img src="/tienda_images/<%= videojuego.getImagen() %>"
                          class="card-img-top"
                          alt="<%= videojuego.getTitulo() %>"
                          style="height: 250px; object-fit: cover;">

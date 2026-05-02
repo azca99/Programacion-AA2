@@ -105,7 +105,7 @@ public class EditVideojuego extends HttpServlet {
             if (imagen != null && imagen.getSize() > 0) {
                 filename = UUID.randomUUID() + ".png";
 
-                String imagePath = "E:/grado superior programacion/programacion/webapp/Programacion-AA2/src/main/webapp/img";
+                String imagePath = "E:/Tomcat/webapps/tienda_images";
 
                 // Guarda imagen en servidor
                 InputStream inputStream = imagen.getInputStream();

@@ -29,7 +29,7 @@
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <div style="height: 250px; overflow: hidden;">
-            <img src="img/witcher3.jpg"
+            <img src="/tienda_images/witcher3.jpg"
                  class="card-img-top"
                  alt="The Witcher 3"
                  style="object-fit: cover">
@@ -51,7 +51,7 @@
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <div style="height: 250px; overflow: hidden;">
-            <img src="img/ea-sports-fc-26.jpg"
+            <img src="/tienda_images/ea-sports-fc-26.jpg"
                  class="card-img-top"
                  alt="FIFA"
                  style="object-fit: cover">
@@ -73,7 +73,7 @@
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <div style="height: 250px; overflow: hidden;">
-            <img src="img/zelda-botw.jpg"
+            <img src="/tienda_images/zelda-botw.jpg"
                  class="card-img-top"
                  alt="Zelda"
                  style="object-fit: cover">
