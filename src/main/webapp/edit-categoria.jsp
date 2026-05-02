@@ -27,6 +27,11 @@
                 return;
             }
 
+            // Pedir confirmación
+            if (!confirm("¿Seguro que quieres guardar esta categoría?")) {
+                return;
+            }
+
             // Crear formulario
             const data = new FormData(form);
 

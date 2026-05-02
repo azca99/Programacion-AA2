@@ -137,6 +137,12 @@
                        class="btn btn-outline-secondary">
                         Editar
                     </a>
+
+                    <a href="remove-videojuego?id=<%= usuario.getIdUsuario() %>"
+                       class="btn btn-outline-danger"
+                       onclick="return confirm('¿Seguro que quieres eliminar este videojuego?')">
+                        Eliminar
+                    </a>
                 </div>
 
             </div>
