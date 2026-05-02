@@ -25,9 +25,29 @@ public class ListCategorias extends HttpServlet {
             Database.connect();
 
             CategoriaDAO categoriaDAO = jdbi.onDemand(CategoriaDAO.class);
-            List<Categoria> categorias = categoriaDAO.getAll();
 
+            // Recoger, validar y dar formato a los inputs
+            String nombre = request.getParameter("nombre");
+            String activaParam = request.getParameter("activa");
+
+            if (nombre == null) {
+                nombre = "";
+            }
+
+            int activa = -1;
+
+            if (activaParam != null && !activaParam.isEmpty()) {
+                activa = Integer.parseInt(activaParam);
+            }
+
+            List<Categoria> categorias = categoriaDAO.search(nombre, activa, activa);
+
+            // Mandar los datos a JSP
             request.setAttribute("categorias", categorias);
+            request.setAttribute("nombreBuscado", nombre);
+            request.setAttribute("activaBuscada", activa);
+
+            // Enviar datos al JSP
             request.getRequestDispatcher("categorias.jsp").forward(request, response);
 
         } catch (ClassNotFoundException e) {
