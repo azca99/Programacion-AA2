@@ -45,6 +45,10 @@
                         <a class="nav-link" href="usuarios">Usuarios</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="pedidos">Pedidos</a>
+                    </li>
+
                 <% } %>
                 <!-- Usuario login -->
                 <% if (usuarioSesion == null) { %>
