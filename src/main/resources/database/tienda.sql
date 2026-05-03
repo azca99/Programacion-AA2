@@ -1,0 +1,57 @@
+USE tienda
+
+-- Tabla: USUARIOS --
+CREATE TABLE IF NOT EXISTS usuario (
+	id_usuario INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(100) NOT NULL,
+	email VARCHAR(120) NOT NULL UNIQUE,
+	password VARCHAR(20) NOT NULL,
+	telefono VARCHAR(20) NOT NULL,
+	saldo DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+	fecha_registro DATE NOT NULL,
+	rol VARCHAR(20) NOT NULL,
+	activo BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+-- Tabla: CATEGORIA --
+CREATE TABLE IF NOT EXISTS categoria (
+	id_categoria INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(100) NOT NULL,
+	descripcion VARCHAR(255),
+	edad_recomendada INT NOT NULL,
+	descuento_base DECIMAL(5,2) NOT NULL DEFAULT 0.00,
+	fecha_creacion DATE NOT NULL,
+	activa BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+-- Tabla: VIDEOJUEGO --
+CREATE TABLE IF NOT EXISTS videojuego (
+	id_videojuego INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	titulo VARCHAR(120) NOT NULL,
+	descripcion VARCHAR(255),
+	precio DECIMAL(10,2) NOT NULL,
+	imagen VARCHAR(255),
+	destacado BOOLEAN NOT NULL DEFAULT FALSE,
+	fecha_lanzamiento DATE NOT NULL,
+	stock INT NOT NULL DEFAULT 0,
+	id_categoria INT UNSIGNED NOT NULL,
+	CONSTRAINT fk_videojuego_categoria
+		FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
+		ON UPDATE CASCADE
+	    ON DELETE RESTRICT
+);
+
+-- Tabla: PEDIDO --
+CREATE TABLE IF NOT EXISTS pedido (
+	id_pedido INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	codigo VARCHAR(30) NOT NULL UNIQUE,
+	total DECIMAL(10,2) NOT NULL,
+	pagado BOOLEAN NOT NULL DEFAULT FALSE,
+	fecha_pedido DATE NOT NULL,
+	cantidad_articulos INT NOT NULL DEFAULT 1,
+	id_usuario INT UNSIGNED NOT NULL,
+	CONSTRAINT fk_pedido_usuario
+		FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+		ON UPDATE CASCADE
+	    ON DELETE RESTRICT
+);
