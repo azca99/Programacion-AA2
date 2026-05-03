@@ -1,4 +1,6 @@
-USE tienda
+CREATE DATABASE tienda;
+
+USE tienda;
 
 -- Tabla: USUARIOS --
 CREATE TABLE IF NOT EXISTS usuario (
