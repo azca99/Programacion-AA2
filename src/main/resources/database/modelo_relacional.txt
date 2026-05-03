@@ -1,0 +1,4 @@
+usuario [#id, nombre, email, password, telefono, saldo, fecha_registro, rol, activo]
+pedido [#id, codigo, total, pagado, fecha_pedido, cantidad_articulos, -id_usuario]
+categoria [#id, nombre, descripcion, edad_recomendada, descuento_base, fecha_creacion, activa]
+videojuego [#id, titulo, descripcion, precio, imagen, destacado, fecha_lanzamiento, stock, -id_categoria]

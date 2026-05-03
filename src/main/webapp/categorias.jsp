@@ -1,0 +1,157 @@
+<%@ page import="com.svalero.tienda.model.Categoria" %>
+<%@ page import="com.svalero.tienda.model.Usuario" %>
+<%@ page import="java.util.List" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ include file="includes/header.jsp" %>
+
+<%
+    List<Categoria> categorias = (List<Categoria>) request.getAttribute("categorias");
+
+    String nombreBuscado = (String) request.getAttribute("nombreBuscado");
+    Integer activaBuscada = (Integer) request.getAttribute("activaBuscada");
+
+    if (nombreBuscado == null) {
+        nombreBuscado = "";
+    }
+
+    if (activaBuscada == null) {
+        activaBuscada = -1;
+    }
+%>
+
+<main class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="fw-bold">Categorías</h1>
+            <p class="text-muted mb-0">
+                Gestiona las categorías de videojuegos de la tienda.
+            </p>
+        </div>
+
+        <% if (esAdmin) { %>
+        <a href="edit-categoria.jsp" class="btn btn-primary">
+            Añadir categoría
+        </a>
+        <% } %>
+    </div>
+
+    <form action="categorias" method="get" class="row g-3 mb-4">
+
+        <div class="col-md-5">
+            <label class="form-label">Nombre</label>
+            <input type="text"
+                   name="nombre"
+                   class="form-control"
+                   placeholder="Buscar por nombre"
+                   value="<%= nombreBuscado %>">
+        </div>
+
+        <div class="col-md-5">
+            <label class="form-label">Estado</label>
+            <select name="activa" class="form-select">
+                <option value="-1" <%= activaBuscada == -1 ? "selected" : "" %>>
+                    Todas las categorías
+                </option>
+
+                <option value="1" <%= activaBuscada == 1 ? "selected" : "" %>>
+                    Activas
+                </option>
+
+                <option value="0" <%= activaBuscada == 0 ? "selected" : "" %>>
+                    Inactivas
+                </option>
+            </select>
+        </div>
+
+        <div class="col-md-2 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">
+                Buscar
+            </button>
+        </div>
+
+    </form>
+
+    <div class="row g-4">
+
+        <%
+            if (categorias != null && !categorias.isEmpty()) {
+                for (Categoria categoria : categorias) {
+        %>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= categoria.getNombre() %>
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        <%= categoria.getDescripcion() %>
+                    </p>
+
+                    <p class="mb-1">
+                        <strong>Edad recomendada:</strong>
+                        <%= categoria.getEdadRecomendada() %>+
+                    </p>
+
+                    <p class="mb-1">
+                        <strong>Descuento base:</strong>
+                        <%= categoria.getDescuentoBase() %> %
+                    </p>
+
+                    <p class="mb-0">
+                        <strong>Estado:</strong>
+                        <span class="<%= categoria.isActiva() ? "text-success" : "text-danger" %>">
+                            <%= categoria.isActiva() ? "Activa" : "Inactiva" %>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="card-footer bg-white border-0 d-flex gap-2">
+
+                    <a href="view-categoria?id=<%= categoria.getIdCategoria() %>"
+                       class="btn btn-dark w-100">
+                        Ver detalle
+                    </a>
+
+                    <% if (esAdmin) { %>
+                    <a href="edit-categoria.jsp?id=<%= categoria.getIdCategoria() %>"
+                       class="btn btn-outline-secondary">
+                        Editar
+                    </a>
+
+                    <a href="remove-categoria?id=<%= categoria.getIdCategoria() %>"
+                       class="btn btn-outline-danger"
+                       onclick="return confirm('¿Seguro que quieres eliminar esta categoría?')">
+                        Eliminar
+                    </a>
+                    <% } %>
+
+                </div>
+
+            </div>
+        </div>
+
+        <%
+            }
+        } else {
+        %>
+
+        <div class="col-12">
+            <div class="alert alert-warning">
+                No se han encontrado categorías con esos criterios.
+            </div>
+        </div>
+
+        <%
+            }
+        %>
+
+    </div>
+
+</main>
+
+<%@ include file="includes/footer.jsp" %>
