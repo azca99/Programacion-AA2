@@ -168,6 +168,52 @@ CREATE DATABASE tienda;
 
 ---
 
+## Importar la base de datos
+
+El proyecto incluye un archivo dump de la base de datos:
+
+```text
+dump-tienda-202605031026.sql
+```
+
+Este archivo contiene la estructura de la base de datos y los datos de prueba necesarios para ejecutar la aplicación.
+
+### Importar desde DBeaver
+
+1. Crear una conexión MariaDB local.
+2. Crear o seleccionar la base de datos `tienda`.
+3. Abrir el archivo `dump-tienda-202605031030.sql`.
+4. Ejecutar el script completo.
+5. Comprobar que se han creado las tablas:
+   - `usuario`
+   - `categoria`
+   - `videojuego`
+   - `pedido`
+
+### Importar desde terminal
+
+Desde la raíz del proyecto, si el dump está dentro de una carpeta `database`, ejecutar:
+
+```bash
+mysql -u root -p tienda < database/dump-tienda-202605031030.sql
+```
+
+El dump ya incluye `CREATE DATABASE` y `USE tienda`, así que se puede ejecutar así:
+
+```bash
+mysql -u root -p < database/dump-tienda-202605031030.sql
+```
+
+### Nota
+
+El archivo dump puede incluir nombres de imágenes ya insertados en la tabla `videojuego`. Para que esas imágenes se visualicen correctamente, deben existir también en la carpeta externa de Tomcat:
+
+```text
+webapps/tienda_images
+```
+
+---
+
 ## Configuración de imágenes
 
 Las imágenes de los videojuegos **no se guardan dentro de la base de datos**.
