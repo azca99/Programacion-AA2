@@ -23,7 +23,7 @@ public interface PedidoDAO {
     @UseRowMapper(PedidoMapper.class)
     List<Pedido> getAll();
 
-    @SqlQuery("SELECT * FROM usuario WHERE id_pedido = ?")
+    @SqlQuery("SELECT * FROM pedido WHERE id_pedido = ?")
     @UseRowMapper(PedidoMapper.class)
     Pedido getById(int idPedido);
 }
